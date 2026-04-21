@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className="container">
-      <h1> Frases do Neymar</h1>
-      <p>Motivação de craque 🇧🇷</p>
+      <h1> Frases do neymar</h1>
+      <p>Motivação do neymar</p>
       <div className="box">
       <img src={neymar} alt="Neymar" className="neymar-img" />
       <button onClick={gerarFrase}>Gerar Frase</button>
