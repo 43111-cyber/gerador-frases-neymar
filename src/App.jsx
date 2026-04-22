@@ -14,7 +14,7 @@ function App() {
   ];
 
   const [frase, setFrase] = useState(
-    "Clique no botão para gerar uma frase."
+    "Clique no botão para gerar uma frase do Neymar."
   );
 
   const gerarFrase = () => {
@@ -24,22 +24,47 @@ function App() {
 
   return (
     <div className="page">
-      <div className="container">
-        <div className="card">
-          
+      <div className="phone">
+        <div className="status-bar">
+          <span>9:41</span>
+          <div className="status-icons">
+            <span>◦◦◦</span>
+          </div>
+        </div>
 
-          <h1>Frases do Neymar</h1>
-          <p className="subtitle">Motivação de craque</p>
+        <div className="top-bar">
+          <button className="icon-btn">☰</button>
+          <button className="icon-btn">⚙</button>
+        </div>
 
-          <div className="image-box">
+        <div className="hero">
+          <p className="hello">Hi, Neymar fan</p>
+          <h1>Vamos gerar uma frase inspiradora?</h1>
+        </div>
+
+        <div className="cards-grid">
+          <div className="main-card">
+            <p className="small-title">Frase do dia</p>
             <img src={neymar} alt="Neymar" className="neymar-img" />
+            <button className="primary-btn" onClick={gerarFrase}>
+              Gerar frase
+            </button>
           </div>
 
-          <button onClick={gerarFrase}>Gerar Frase</button>
-
-          <div className="frase-box">
-            <p>{frase}</p>
+          <div className="side-card">
+            <p>Frases motivacionais</p>
+            
           </div>
+
+          <div className="side-card">
+            <p>Energia de craque</p>
+            
+          </div>
+        </div>
+
+        <div className="result-card">
+          <p className="result-label">Frase gerada</p>
+          <h2>{frase}</h2>
         </div>
       </div>
     </div>
