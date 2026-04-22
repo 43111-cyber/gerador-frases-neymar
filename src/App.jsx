@@ -1,5 +1,5 @@
 import { useState } from "react";
-import neymar from "./assets/download.jpg";
+import neymar from "./download.jpg";
 function App() {
   const frases = [
     "O segredo é nunca desistir ",
