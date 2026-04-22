@@ -1,58 +1,123 @@
-body {
+* {
   margin: 0;
-  font-family: Arial;
-  background: linear-gradient(135deg, #009c3b, #002776);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #009c3b, #006b5f, #003b8b);
   color: white;
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
 .container {
+  width: 100%;
+  max-width: 430px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 28px;
+  padding: 32px 24px;
   text-align: center;
-  margin-top: 100px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 223, 0, 0.18);
+  color: #ffdf00;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 h1 {
+  font-size: 2rem;
   color: #ffdf00;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.neymar-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 3px solid rgba(255, 223, 0, 0.7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
 }
 
 button {
-  padding: 12px 20px;
-  border-radius: 12px;
+  width: 100%;
+  padding: 14px 18px;
   border: none;
-  background: linear-gradient(135deg, #ffdf00, #00ff88);
-  color: #002776;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffdf00, #8cff66);
+  color: #003b8b;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: translateY(-2px);
 }
 
-
-.card {
-  margin-top: 30px;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  border-radius: 12px;
-  font-size: 18px;
-}
-.box {
+.frase-box {
+  margin-top: 22px;
+  padding: 22px 18px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.22);
+  min-height: 90px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-.container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
-.neymar-img {
-  width: 200px;
-  border-radius: 15px;
-  margin-top: 20px;
+
+.frase-box p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 500px) {
+  .card {
+    padding: 24px 18px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .neymar-img {
+    width: 170px;
+    height: 170px;
+  }
 }

@@ -1,18 +1,21 @@
 import { useState } from "react";
 import neymar from "./download.jpg";
+
 function App() {
   const frases = [
-    "O segredo é nunca desistir ",
-    "Treine enquanto eles dormem ",
-    "O impossível é só questão de opinião ",
-    "Jogue com alegria ",
-    "Cada dia é uma nova chance ",
-    "Foco, força e fé ",
-    "Se divirta jogando bola ",
-    "Sonhe grande e trabalhe duro "
+    "O segredo é nunca desistir.",
+    "Treine enquanto eles dormem.",
+    "O impossível é só questão de opinião.",
+    "Jogue com alegria.",
+    "Cada dia é uma nova chance.",
+    "Foco, força e fé.",
+    "Se divirta jogando bola.",
+    "Sonhe grande e trabalhe duro."
   ];
 
-  const [frase, setFrase] = useState("");
+  const [frase, setFrase] = useState(
+    "Clique no botão para gerar uma frase."
+  );
 
   const gerarFrase = () => {
     const random = Math.floor(Math.random() * frases.length);
@@ -20,17 +23,25 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <h1>Frases do neymar</h1>
-      <p>Motivação de craque</p>
-      <img src={neymar} alt="Neymar" className="neymar-img" />
-      <button onClick={gerarFrase}>Gerar Frase</button>
-
-      {frase && (
+    <div className="page">
+      <div className="container">
         <div className="card">
-          <p>{frase}</p>
+          <span className="tag">Modern UI App</span>
+
+          <h1>Frases do Neymar</h1>
+          <p className="subtitle">Motivação de craque</p>
+
+          <div className="image-box">
+            <img src={neymar} alt="Neymar" className="neymar-img" />
+          </div>
+
+          <button onClick={gerarFrase}>Gerar Frase</button>
+
+          <div className="frase-box">
+            <p>{frase}</p>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
