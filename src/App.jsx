@@ -26,7 +26,7 @@ function App() {
     <div className="page">
       <div className="container">
         <div className="card">
-          <span className="tag">Modern UI App</span>
+          
 
           <h1>Frases do Neymar</h1>
           <p className="subtitle">Motivação de craque</p>
